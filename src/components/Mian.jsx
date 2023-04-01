@@ -11,6 +11,7 @@ function Mian() {
   const [randomWordData, setRandomWordData] = useState('');
 
   const router = useRouter();
+
   async function randomWord() {
     const { data } = await axios.get(
       'https://random-word-api.herokuapp.com/word'
@@ -32,8 +33,8 @@ function Mian() {
   };
 
   return (
-    <main className=" h-[40.7rem]">
-      <div className="h-full flex flex-col items-center justify-center">
+    <main className=" h-[65vh] sm:h-[70vh] lg:h-[75vh]">
+      <div className="h-full flex flex-col  items-center justify-center">
         <Image
           priority={true}
           src="/Google_2015_logo.svg.png"
