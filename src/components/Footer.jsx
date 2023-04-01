@@ -16,7 +16,6 @@ function Footer() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-  console.log(screenSize);
 
   return (
     <footer className=" h-[25vh] sm:h-[20vh] lg:h-[15vh] bg-gray-200">
