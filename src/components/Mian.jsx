@@ -1,6 +1,7 @@
 'use client';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
+
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { IoSearchOutline } from 'react-icons/io5';
@@ -9,7 +10,6 @@ import { useRouter } from 'next/navigation';
 function Mian() {
   const [value, setValue] = useState('');
   const [randomWordData, setRandomWordData] = useState('');
-
   const router = useRouter();
 
   async function randomWord() {
@@ -46,7 +46,7 @@ function Mian() {
           onSubmit={handleSubmit(onSubmit)}
           className="w-full p-4 flex flex-col items-center "
         >
-          <div className="flex justify-between items-center border-2 w-5/6 p-4 rounded-full max-w-lg">
+          <div className="flex justify-between items-center border-2 w-5/6 p-3 rounded-full max-w-lg">
             <div>
               <IoSearchOutline />
             </div>
