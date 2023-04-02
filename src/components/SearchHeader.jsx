@@ -10,6 +10,7 @@ import { MdOutlineMic, MdOutlinePhotoCamera } from 'react-icons/md';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useForm } from 'react-hook-form';
+import SearchHeaderOption from './SearchHeaderOption';
 function SearchHeader() {
   const router = useRouter();
   const [valueSearch, setValueSearch] = useState('');
@@ -77,12 +78,7 @@ function SearchHeader() {
               </div>
             </div>
           </form>
-          <div>
-            <ul className="flex p-2 space-x-3">
-              <li>All</li>
-              <li>Images</li>
-            </ul>
-          </div>
+          <SearchHeaderOption />
         </header>
       )}
       {screenSize >= 640 && (
@@ -129,14 +125,7 @@ function SearchHeader() {
               <p>avatar</p>
             </div>
           </div>
-          <div>
-            <div>
-              <ul className="flex p-2 space-x-3">
-                <li className=" cursor-pointer hover:underline">All</li>
-                <li className=" cursor-pointer hover:underline">Images</li>
-              </ul>
-            </div>
-          </div>
+          <SearchHeaderOption />
         </header>
       )}
     </>
