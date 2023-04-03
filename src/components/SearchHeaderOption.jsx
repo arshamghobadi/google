@@ -13,7 +13,7 @@ function SearchHeaderOption() {
     );
   }
   return (
-    <div>
+    <div className=" ml-14 sm:ml-36">
       <ul className="flex p-2 space-x-3 border-b-2">
         <li
           onClick={() => selectTab('All')}

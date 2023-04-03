@@ -3,9 +3,9 @@ import '../../app/globals.css';
 
 export default function SearchLayout({ children }) {
   return (
-    <div className="h-screen">
+    <div>
       <SearchHeader />
-      {children}
+      <div>{children}</div>
     </div>
   );
 }
