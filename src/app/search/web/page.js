@@ -8,7 +8,7 @@ async function SearchPage({ searchParams }) {
     `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}`
   );
   const { data } = response;
-  console.log(data);
+
   if (!response) {
     throw new Error('somthing went wrong please try again');
   }
