@@ -1,11 +1,13 @@
 import CardSearch from '@/components/CardSearch';
+import Pagination from '@/components/Pagination';
 import axios from 'axios';
 import Link from 'next/link';
 import React from 'react';
 
 async function SearchPage({ searchParams }) {
+  const startIndex = searchParams.start || '1';
   const response = await axios.get(
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}`
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&start=${startIndex}`
   );
   const { data } = response;
 
@@ -34,6 +36,7 @@ async function SearchPage({ searchParams }) {
           <CardSearch key={i} data={item} />
         ))}
       </div>
+      <Pagination />
     </div>
   );
 }

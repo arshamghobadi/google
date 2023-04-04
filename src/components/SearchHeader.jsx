@@ -11,6 +11,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import SearchHeaderOption from './SearchHeaderOption';
+
 function SearchHeader() {
   const router = useRouter();
   const [valueSearch, setValueSearch] = useState('');

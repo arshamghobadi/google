@@ -1,11 +1,13 @@
 import ImageSearch from '@/components/ImageSearch';
+import Pagination from '@/components/Pagination';
 import axios from 'axios';
 import Link from 'next/link';
 import React from 'react';
 
 async function ImagePage({ searchParams }) {
+  const startIndex = searchParams.start || '1';
   const response = await axios.get(
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=image`
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=image&start=${startIndex}`
   );
   const { data } = response;
 
@@ -30,6 +32,7 @@ async function ImagePage({ searchParams }) {
           <ImageSearch key={i} data={item} />
         ))}
       </div>
+      <Pagination />
     </div>
   );
 }
