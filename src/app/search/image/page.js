@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import ImageSearch from '@/components/ImageSearch';
 import Pagination from '@/components/Pagination';
 import axios from 'axios';

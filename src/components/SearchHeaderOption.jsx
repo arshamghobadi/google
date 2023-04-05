@@ -13,30 +13,33 @@ function SearchHeaderOption() {
     );
   }
   return (
-    <div className=" ml-14 sm:ml-36">
-      <ul className="flex p-2 space-x-3 border-b-2">
-        <li
-          onClick={() => selectTab('All')}
-          className={`flex space-x-1 items-center cursor-pointer hover:text-blue-600 ${
-            pathName === '/search/web' &&
-            'text-blue-600 underline underline-offset-8'
-          }`}
-        >
-          <IoSearchOutline />
-          <p>All</p>
-        </li>
-        <li
-          onClick={() => selectTab('Images')}
-          className={`flex space-x-1 items-center cursor-pointer hover:text-blue-600 ${
-            pathName === '/search/image' &&
-            'text-blue-600 underline underline-offset-8'
-          }`}
-        >
-          <HiPhoto />
-          <p>Images</p>
-        </li>
-      </ul>
-    </div>
+    <>
+      <div className=" ml-8 sm:ml-36 md:ml-40  max-w-5xl">
+        <ul className="flex p-2 space-x-3 ">
+          <li
+            onClick={() => selectTab('All')}
+            className={`flex space-x-1 items-center cursor-pointer hover:text-blue-600 ${
+              pathName === '/search/web' &&
+              'text-blue-600 underline underline-offset-8'
+            }`}
+          >
+            <IoSearchOutline />
+            <p>All</p>
+          </li>
+          <li
+            onClick={() => selectTab('Images')}
+            className={`flex space-x-1 items-center cursor-pointer hover:text-blue-600 ${
+              pathName === '/search/image' &&
+              'text-blue-600 underline underline-offset-8'
+            }`}
+          >
+            <HiPhoto />
+            <p>Images</p>
+          </li>
+        </ul>
+      </div>
+      <div className="w-full border-b-2"></div>
+    </>
   );
 }
 

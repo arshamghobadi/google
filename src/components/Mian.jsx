@@ -55,7 +55,7 @@ function Mian() {
               onChange={(e) => setValue(e.currentTarget.value)}
               className=" outline-none flex-grow px-2"
             />
-            <div className="flex space-x-2">
+            <div className="flex space-x-2 ">
               <MdOutlineMic />
               <MdOutlinePhotoCamera />
             </div>
@@ -65,7 +65,7 @@ function Mian() {
               Google Search
             </button>
             <button onClick={randomWord} className="btn ">
-              Im Felling Lucky{' '}
+              Im Feelling Lucky{' '}
             </button>
           </div>
         </form>

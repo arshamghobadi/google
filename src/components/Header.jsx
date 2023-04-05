@@ -9,7 +9,7 @@ function Header() {
           Sign in
         </button>
         <div className=" flex p-2 items-center mx-auto hover:bg-gray-300 hover:rounded-full transition">
-          <CgMenuGridR className="" size={30} />
+          <CgMenuGridR className=" text-gray-600" size={30} />
         </div>
         <Link className=" hover:underline" href="/">
           Images

@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import CardSearch from '@/components/CardSearch';
 import Pagination from '@/components/Pagination';
 import axios from 'axios';

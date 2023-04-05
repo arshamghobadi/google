@@ -11,6 +11,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import SearchHeaderOption from './SearchHeaderOption';
+import Link from 'next/link';
 
 function SearchHeader() {
   const router = useRouter();
@@ -85,7 +86,7 @@ function SearchHeader() {
       {screenSize >= 640 && (
         <header className="h-[25vh] w-screen">
           <div className="flex w-full items-center justify-between p-4">
-            <div>
+            <Link href="/">
               <Image
                 priority={true}
                 src="/Google_2015_logo.svg.png"
@@ -93,7 +94,7 @@ function SearchHeader() {
                 height={100}
                 alt="google logo"
               />
-            </div>
+            </Link>
             <form
               onSubmit={handleSubmit(onSubmit)}
               className=" flex-grow text-gray-500"
